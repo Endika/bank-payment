@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    PAIN base module for OpenERP
-#    Copyright (C) 2013 Akretion (http://www.akretion.com)
+#    PAIN base module for Odoo
+#    Copyright (C) 2013-2015 Akretion (http://www.akretion.com)
 #    @author: Alexis de Lattre <alexis.delattre@akretion.com>
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -22,10 +22,13 @@
 {
     'name': 'Account Banking PAIN Base Module',
     'summary': 'Base module for PAIN file generation',
-    'version': '0.1',
+    'version': '0.2',
     'license': 'AGPL-3',
-    'author': 'Akretion, Noviat',
-    'website': 'http://openerp-community-association.org/',
+    'author': "Akretion, "
+              "Noviat, "
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
+              "Odoo Community Association (OCA)",
+    'website': 'https://github.com/OCA/bank-payment',
     'contributors': ['Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>'],
     'category': 'Hidden',
     'depends': ['account_banking_payment_export'],
@@ -37,17 +40,6 @@
         'views/payment_mode_view.xml',
         'views/res_company_view.xml',
     ],
-    'description': '''
-Base module for PAIN file generation
-====================================
-
-This module contains fields and functions that are used by the module for SEPA
-Credit Transfer (account_banking_sepa_credit_transfer) and SEPA Direct Debit
-(account_banking_sepa_direct_debit). This module doesn't provide any
-functionality by itself.
-
-This module was started during the Akretion-Noviat code sprint of November
-21st 2013 in Epiais les Louvres (France).
-    ''',
+    'post_init_hook': 'set_default_initiating_party',
     'installable': True,
 }

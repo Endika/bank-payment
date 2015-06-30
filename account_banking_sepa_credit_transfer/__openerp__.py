@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    SEPA Credit Transfer module for OpenERP
-#    Copyright (C) 2010-2013 Akretion (http://www.akretion.com)
+#    SEPA Credit Transfer module for Odoo
+#    Copyright (C) 2010-2015 Akretion (http://www.akretion.com)
 #    @author: Alexis de Lattre <alexis.delattre@akretion.com>
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -22,38 +22,20 @@
 {
     'name': 'Account Banking SEPA Credit Transfer',
     'summary': 'Create SEPA XML files for Credit Transfers',
-    'version': '0.2',
+    'version': '0.3',
     'license': 'AGPL-3',
-    'author': 'Akretion',
-    'website': 'http://www.akretion.com',
-    'contributors': ['Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>'],
+    'author': "Akretion, "
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
+              "Odoo Community Association (OCA)",
+    'website': 'https://github.com/OCA/bank-payment',
     'category': 'Banking addons',
     'depends': ['account_banking_pain_base'],
-    'external_dependencies': {
-        'python': ['unidecode', 'lxml'],
-    },
     'data': [
-        'views/account_banking_sepa_view.xml',
         'wizard/export_sepa_view.xml',
         'data/payment_type_sepa_sct.xml',
-        'security/ir.model.access.csv',
     ],
     'demo': [
         'demo/sepa_credit_transfer_demo.xml'
     ],
-    'description': '''
-Module to export payment orders in SEPA XML file format.
-
-SEPA PAIN (PAyment INitiation) is the new european standard for
-Customer-to-Bank payment instructions. This module implements SEPA Credit
-Transfer (SCT), more specifically PAIN versions 001.001.02, 001.001.03,
-001.001.04 and 001.001.05. It is part of the ISO 20022 standard, available on
-http://www.iso20022.org.
-
-The Implementation Guidelines for SEPA Credit Transfer published by the
-European Payments Council (http://http://www.europeanpaymentscouncil.eu) use
-PAIN version 001.001.03, so it's probably the version of PAIN that you should
-try first.
-    ''',
     'installable': True,
 }

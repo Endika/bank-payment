@@ -25,9 +25,11 @@
     'summary': 'Banking mandates',
     'version': '0.1',
     'license': 'AGPL-3',
-    'author': 'Compassion CH',
-    'website': 'http://www.compassion.ch',
-    'contributors': ['Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>'],
+    'author': "Compassion CH, "
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
+              "Akretion, "
+              "Odoo Community Association (OCA)",
+    'website': 'https://github.com/OCA/bank-payment',
     'category': 'Banking addons',
     'depends': [
         'account_payment',
@@ -38,20 +40,10 @@
         'views/account_payment_view.xml',
         'views/res_partner_bank_view.xml',
         'data/mandate_reference_sequence.xml',
+        'security/mandate_security.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [],
     'test': ['test/banking_mandate.yml'],
-    'description': '''
-    This module adds a generic model for banking mandates.
-    These mandates can be specialized to fit any banking mandates (such as
-    sepa or lsv).
-
-    A banking mandate is attached to a bank account and represents an
-    authorization that the bank account owner gives to a company for a
-    specific operation (such as direct debit).
-    You can setup mandates from the accounting menu or directly from a bank
-    account.
-    ''',
     'installable': True,
 }

@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    PAIN Base module for OpenERP
+#    PAIN Base module for Odoo
 #    Copyright (C) 2013 Akretion (http://www.akretion.com)
 #    @author: Alexis de Lattre <alexis.delattre@akretion.com>
 #
@@ -21,3 +21,4 @@
 ##############################################################################
 
 from . import models
+from .post_install import set_default_initiating_party
